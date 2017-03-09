@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="window" prefHeight="366.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tablecreator.TableCreatorController">
+	<children>
+      <BorderPane prefHeight="366.0" prefWidth="329.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TextArea fx:id="pasteText" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="newTableItem" mnemonicParsing="false" text="Create New Table" />
+                        <MenuItem fx:id="selectTableItem" mnemonicParsing="false" text="Select Table" />
+                        <MenuItem fx:id="closeTableItem" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="aboutItem" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuTableInfo" disable="true" mnemonicParsing="false" text="&lt;No Table Selected&gt;" />
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="insertBtn" disable="true" minWidth="100.0" mnemonicParsing="false" onAction="#addData" prefWidth="100.0" text="Insert" />
+                  <Button fx:id="clearBtn" disable="true" minWidth="100.0" mnemonicParsing="false" prefWidth="100.0" text="Clear" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+	</children>
+</AnchorPane>
